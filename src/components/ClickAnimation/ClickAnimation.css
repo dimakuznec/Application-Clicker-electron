@@ -1,0 +1,19 @@
+.click-animation {
+  position: absolute;
+  animation: fadeOut 1s forwards;
+  color: rgb(255, 161, 161);
+  font-size: 1.9rem;
+  font-weight: bold;
+  pointer-events: none;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}/*# sourceMappingURL=ClickAnimation.css.map */

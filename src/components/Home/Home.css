@@ -1,0 +1,336 @@
+@charset "UTF-8";
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: bisque;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+.display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+  font-size: 20px;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+}
+
+.count {
+  font-size: 1.5em;
+  margin-left: 10px;
+}
+
+.clickable-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f44336;
+  border-radius: 150px;
+}
+
+.clickable-button {
+  background: none;
+  border: none;
+  padding: 20px;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+}
+
+.clickable-icon {
+  width: 130px;
+  height: 130px;
+}
+
+.plus-one {
+  position: absolute;
+  top: -40px;
+  font-size: 2em;
+  color: red;
+  animation: moveUp 1s forwards;
+}
+
+.plus-one.win {
+  color: #4caf50;
+}
+
+.plus-one.lose {
+  color: #f44336;
+}
+
+.plus-one.show {
+  opacity: 1;
+}
+
+@keyframes moveUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}
+.imgCoins {
+  width: 50px;
+  height: 50px;
+}
+
+.upgrade-level {
+  margin-top: 20px;
+  font-size: 1.5em;
+}
+
+.coin-flip-timer {
+  margin-top: 20px;
+  font-size: 1.2em;
+}
+
+.button-game {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.button-game:hover {
+  background-size: cover;
+  outline: none;
+  border: none;
+}
+
+.ButtonClick {
+  border-radius: 70px;
+  margin: 20px;
+  width: 260px;
+  height: 260px;
+}
+
+.ButtonClick {
+  transition: box-shadow 0.5s;
+}
+
+.ButtonClick:hover {
+  animation: rainbowGlow 10s linear infinite;
+}
+
+@keyframes rainbowGlow {
+  0% {
+    box-shadow: 0 0 20px rgb(255, 105, 135), 0 0 40px rgb(255, 105, 135), 0 0 60px rgb(255, 105, 135);
+  }
+  14% {
+    box-shadow: 0 0 20px rgb(255, 165, 0), 0 0 40px rgb(255, 165, 0), 0 0 60px rgb(255, 165, 0);
+  }
+  28% {
+    box-shadow: 0 0 20px rgb(255, 255, 120), 0 0 40px rgb(255, 255, 120), 0 0 60px rgb(255, 255, 120);
+  }
+  42% {
+    box-shadow: 0 0 20px rgb(144, 238, 144), 0 0 40px rgb(144, 238, 144), 0 0 60px rgb(144, 238, 144);
+  }
+  57% {
+    box-shadow: 0 0 20px rgb(135, 206, 250), 0 0 40px rgb(135, 206, 250), 0 0 60px rgb(135, 206, 250);
+  }
+  71% {
+    box-shadow: 0 0 20px rgb(218, 112, 214), 0 0 40px rgb(218, 112, 214), 0 0 60px rgb(218, 112, 214);
+  }
+  85% {
+    box-shadow: 0 0 20px rgb(221, 160, 221), 0 0 40px rgb(221, 160, 221), 0 0 60px rgb(221, 160, 221);
+  }
+  100% {
+    box-shadow: 0 0 20px rgb(255, 105, 135), 0 0 40px rgb(255, 105, 135), 0 0 60px rgb(255, 105, 135);
+  }
+}
+.clickable-icon {
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+}
+
+.Mimg {
+  border-radius: 100%;
+  width: 220px;
+  height: 220px;
+}
+
+.reset-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.reset-button:hover {
+  background-color: darkred;
+}
+
+.Energy {
+  display: flex;
+  border-radius: 10px;
+  background-color: #f44336;
+  color: #fff;
+  padding: 10px 20px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.EnergyImg {
+  width: 30px;
+  height: 30px;
+  color: rgb(93, 0, 255);
+  margin-right: 5px;
+  margin-top: -3px;
+}
+
+.coin-rub {
+  margin-left: 10px;
+}
+
+.text {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.music-player {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  font-size: 1rem;
+  max-width: 90%; /* Адаптивный размер */
+  box-sizing: border-box;
+  overflow: hidden; /* Добавлено */
+}
+
+.music-player .controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px; /* Отступ между бегущей строкой и кнопками управления */
+}
+
+.music-player button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.volume-control {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.volume-control input {
+  margin-left: 5px;
+}
+
+.track-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  text-align: center;
+  animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+/* Медиа-запрос для экранов меньше 600px */
+@media (max-width: 600px) {
+  .music-player {
+    max-width: 100%; /* Плеер занимает всю ширину экрана */
+    bottom: 0; /* Плеер прикреплен к нижнему краю экрана */
+    right: 0; /* Плеер прикреплен к правому краю экрана */
+  }
+}
+.music-player .controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px; /* Отступ между бегущей строкой и кнопками управления */
+}
+
+.music-player button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.volume-control {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.volume-control input {
+  margin-left: 5px;
+}
+
+.track-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  text-align: center;
+  animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}/*# sourceMappingURL=Home.css.map */

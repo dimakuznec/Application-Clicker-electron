@@ -1,0 +1,65 @@
+/* components/Upgrade/Upgrade.css */
+.upgrade-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+	background-color: bisque;
+	height: 100vh;
+	box-sizing: border-box;
+}
+
+.current-level {
+	font-size: 1.5em;
+	margin-bottom: 20px;
+}
+
+.upgrade {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	max-width: 400px;
+	padding: 20px;
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.upgrade-details {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.upgrade-details span {
+	font-size: 1.2em;
+	margin: 5px 0;
+}
+
+.upgrade-button {
+	padding: 10px 20px;
+	font-size: 1.2em;
+	color: white;
+	background-color: #4caf50;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.upgrade-button.available:hover {
+	background-color: #45a049;
+}
+
+.upgrade-button.unavailable {
+	background-color: #ccc;
+	cursor: not-allowed;
+}
+
+.currency-display {
+	margin-top: 20px;
+	font-size: 1.5em;
+}

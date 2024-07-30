@@ -1,0 +1,85 @@
+.coin-flip-modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s, opacity 0.3s;
+	z-index: 3;
+}
+
+.coin-flip-modal-overlay.show {
+	visibility: visible;
+	opacity: 1;
+}
+
+.coin-flip-modal {
+	background-color: white;
+	padding: 20px;
+	max-width: 80%;
+	text-align: center;
+	position: relative;
+	border-radius: 8px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.close-button {
+	position: absolute;
+	top: -23px;
+	right: -28px;
+	background-color: transparent;
+	border: none;
+	font-size: 20px;
+	cursor: pointer;
+	color: #888;
+}
+
+.close-button:hover {
+	color: #333;
+}
+
+.coin-flip-modal h2 {
+	margin-top: 0;
+}
+
+.coin-flip-modal > div {
+	margin-top: 20px;
+}
+
+.coin-flip-modal .close-button {
+	background-color: #f0f0f0;
+	border: none;
+	padding: 10px 20px;
+	margin: 5px;
+	cursor: pointer;
+
+	border-radius: 30px;
+}
+
+.coin-flip-modal button:disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+}
+
+.result {
+	margin-top: 20px;
+}
+
+.result p {
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.win {
+	color: green;
+}
+
+.lose {
+	color: red;
+}
