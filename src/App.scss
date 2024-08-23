@@ -8,6 +8,17 @@ body {
 	text-align: center;
 }
 
+body::-webkit-scrollbar {
+	width: 10px; /* Ширина полосы прокрутки */
+	background-color: #888; /* Цвет полосы прокрутки */
+	border-radius: 5px; /* Закругление углов */
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: #fafafa; /* Цвет полосы прокрутки */
+	border-radius: 5px; /* Закругление углов */
+}
+
 .App-header {
 	background-color: #282c34;
 	padding: 20px;

@@ -44,19 +44,22 @@ const Home: React.FC<HomeProps> = ({
 	const [clickAnimations, setClickAnimations] = useState<
 		{ id: number; clicks: number; position: { x: number; y: number } }[]
 	>([])
-	const [isPlaying, setIsPlaying] = useState<boolean>(true) // Музыка играет по умолчанию
+	const [isPlaying, setIsPlaying] = useState<boolean>(() => {
+		const savedPlayingState = localStorage.getItem('isPlaying')
+		return savedPlayingState ? JSON.parse(savedPlayingState) : true
+	})
 	const [currentTrackIndex, setCurrentTrackIndex] = useState<number>(0)
-	const [volume, setVolume] = useState<number>(0.5) // Начальная громкость 50%
+	const [volume, setVolume] = useState<number>(0.5)
 	const audioRef = useRef<HTMLAudioElement>(null)
 
 	const tracks = [
 		{ src: Music1, title: 'Battlefield Elegy' },
 		{ src: Music2, title: 'Relaxing Music' },
 		{ src: Music3, title: 'flow' },
-	] // Добавьте сюда другие треки
+	]
 
 	const maxEnergy = 100
-	const energyRegenRate = 3 // Energy regen per second
+	const energyRegenRate = 3
 	const clickEnergyCost = 10
 	const baseClickValue = 1
 
@@ -79,9 +82,11 @@ const Home: React.FC<HomeProps> = ({
 	useEffect(() => {
 		if (audioRef.current) {
 			audioRef.current.src = tracks[currentTrackIndex].src
-			audioRef.current.play()
+			if (isPlaying) {
+				audioRef.current.play()
+			}
 		}
-	}, [currentTrackIndex])
+	}, [currentTrackIndex, isPlaying])
 
 	useEffect(() => {
 		if (audioRef.current) {
@@ -92,18 +97,15 @@ const Home: React.FC<HomeProps> = ({
 				audioRef.current.pause()
 			}
 		}
+		localStorage.setItem('isPlaying', JSON.stringify(isPlaying))
 	}, [isPlaying, volume])
 
 	useEffect(() => {
 		const handleVisibilityChange = () => {
-			if (document.visibilityState === 'visible') {
-				if (isPlaying) {
-					audioRef.current?.play()
-				}
+			if (document.visibilityState === 'visible' && isPlaying) {
+				audioRef.current?.play()
 			} else {
-				if (isPlaying) {
-					audioRef.current?.pause()
-				}
+				audioRef.current?.pause()
 			}
 		}
 
@@ -119,7 +121,7 @@ const Home: React.FC<HomeProps> = ({
 			const clickIncrement =
 				upgradeLevel === 1
 					? baseClickValue
-					: baseClickValue * (upgradeLevel * 1.5) // Увеличение кликов пропорционально уровню прокачки
+					: baseClickValue * (upgradeLevel * 1.5)
 			handleClick()
 			setEnergy(prevEnergy => {
 				const newEnergy = prevEnergy - clickEnergyCost
