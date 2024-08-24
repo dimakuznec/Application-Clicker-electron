@@ -29,8 +29,17 @@ process.env.VITE_PUBLIC = VITE_DEV_SERVER_URL
 let win: BrowserWindow | null
 
 function createWindow() {
+	const iconPath = path.join(
+		process.env.VITE_PUBLIC,
+		process.platform === 'win32'
+			? 'm2.png'
+			: process.platform === 'darwin'
+			? 'm2.png'
+			: 'm2.png'
+	)
+
 	win = new BrowserWindow({
-		icon: path.join(process.env.VITE_PUBLIC, 'electron-vite.svg'),
+		icon: iconPath, // Добавляем поддержку иконки
 		webPreferences: {
 			preload: path.join(__dirname, 'preload.mjs'),
 		},

@@ -2,6 +2,7 @@
 import React from 'react'
 import Cet from './../../assets/cet.png'
 import Cet2 from './../../assets/cet2.jpg'
+import M from './../../assets/m2.png'
 import './ImageShop.css'
 
 interface ImageShopProps {
@@ -20,8 +21,9 @@ const ImageShop: React.FC<ImageShopProps> = ({
 	setCurrentImage,
 }) => {
 	const images = [
-		{ name: 'Image 1', cost: 10, src: Cet },
-		{ name: 'Image 2', cost: 20, src: Cet2 },
+		{ name: 'Image 1', cost: 0, src: M },
+		{ name: 'Image 2', cost: 10, src: Cet },
+		{ name: 'Image 3', cost: 20, src: Cet2 },
 		// добавьте здесь другие изображения
 	]
 
