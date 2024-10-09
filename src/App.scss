@@ -1,7 +1,10 @@
 /* App.css */
+@import url('https://fonts.cdnfonts.com/css/minecraft-4');
+
 body {
 	margin: 0;
-	font-family: Arial, sans-serif;
+	font-family: 'Minecraft', sans-serif;
+	font-optical-sizing: auto;
 }
 
 .App {
@@ -9,14 +12,14 @@ body {
 }
 
 body::-webkit-scrollbar {
-	width: 10px; /* Ширина полосы прокрутки */
-	background-color: #888; /* Цвет полосы прокрутки */
-	border-radius: 5px; /* Закругление углов */
+	width: 10px;
+	background-color: #888;
+	border-radius: 5px;
 }
 
 body::-webkit-scrollbar-thumb {
-	background-color: #fafafa; /* Цвет полосы прокрутки */
-	border-radius: 5px; /* Закругление углов */
+	background-color: #fafafa;
+	border-radius: 5px;
 }
 
 .App-header {
@@ -103,7 +106,7 @@ nav a:hover {
 	}
 
 	nav.open {
-		max-height: 200px; /* Adjust based on the number of links */
+		max-height: 200px;
 	}
 
 	.menu-toggle {

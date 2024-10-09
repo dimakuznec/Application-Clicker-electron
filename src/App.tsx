@@ -214,7 +214,7 @@ const App: React.FC = () => {
 							Магазин
 						</Link>
 						<Link className='link' to='/ImageShop' onClick={toggleMenu}>
-							магазин герои
+							магазин героев
 						</Link>
 						<Link className='link' to='/upgrade' onClick={toggleMenu}>
 							Прокачка

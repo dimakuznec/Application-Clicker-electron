@@ -41,7 +41,7 @@ const ImageShop: React.FC<ImageShopProps> = ({
 
 	return (
 		<div className='image-shop-container'>
-			<h2 className='shop-heading'>Магазин герои</h2>
+			<h2 className='shop-heading'>Магазин героев</h2>
 			<ul className='image-list'>
 				{images.map(image => (
 					<li key={image.name} className='image-item'>
