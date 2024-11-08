@@ -333,4 +333,94 @@
   100% {
     transform: translateX(-100%);
   }
+}
+/* Эффекты наведения для кнопок */
+.button-game,
+.reset-button {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #00695c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button-game:hover,
+.reset-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Эффект наведения для кнопки-круга (ButtonClick) */
+.ButtonClick {
+  border-radius: 70px;
+  margin: 20px;
+  width: 260px;
+  height: 260px;
+  background-color: #4caf50;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.5s ease, transform 0.5s ease;
+}
+
+.ButtonClick:hover {
+  animation: rainbowGlow 10s linear infinite;
+  transform: scale(1.05);
+}
+
+/* Эффекты наведения для кнопок */
+.button-game,
+.reset-button {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #00695c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button-game:hover,
+.reset-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.button-game:active,
+.reset-button:active {
+  transform: scale(0.95); /* Уменьшение размера */
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15); /* Тень становится меньше и ближе */
+}
+
+/* Эффект наведения и нажатия для кнопки-круга (ButtonClick) */
+.ButtonClick {
+  border-radius: 70px;
+  margin: 20px;
+  width: 260px;
+  height: 260px;
+  background-color: #4caf50;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.5s ease, transform 0.5s ease;
+}
+
+.ButtonClick:hover {
+  animation: rainbowGlow 10s linear infinite;
+  transform: scale(1.05);
+}
+
+.ButtonClick:active {
+  transform: scale(0.95);
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Эффект наведения и нажатия для элемента Energy */
+.Energy:active {
+  transform: scale(0.95);
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
 }/*# sourceMappingURL=Home.css.map */
