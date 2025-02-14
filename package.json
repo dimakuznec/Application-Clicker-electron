@@ -1,5 +1,5 @@
 {
-	"name": "Application-Clicker",
+	"name": "Application-Clicker-electron",
 	"private": true,
 	"version": "0.0.0",
 	"type": "module",
