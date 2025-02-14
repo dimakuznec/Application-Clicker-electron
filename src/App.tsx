@@ -3,7 +3,7 @@ import { Link, Route, HashRouter as Router, Routes } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify' // Импорт toast из react-toastify
 import 'react-toastify/dist/ReactToastify.css'
 import './App.css'
-import M from './assets/m2.png' // Импортируем изображение с буквой "M"
+import M from './assets/m2.png'
 import CoinFlipModal from './components/CoinFlipModal/CoinFlipModal'
 import Home from './components/Home/Home'
 import ImageShop from './components/ImageShop/ImageShop' // Импортируем компонент ImageShop
