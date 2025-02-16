@@ -1,7 +1,12 @@
 .shop-container {
-  max-width: 1200px;
-  margin: 0 auto;
+  align-items: center;
+  width: 100%;
   padding: 20px;
+  box-sizing: border-box;
+  background-color: bisque;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
 }
 
 .shop-heading {
