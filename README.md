@@ -1,30 +1,43 @@
-# React + TypeScript + Vite
+# Clicker Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Описание
 
-Currently, two official plugins are available:
+Clicker Game — это увлекательная игра-кликер, разработанная с использованием TypeScript, React, SCSS и Electron. Игроки могут зарабатывать внутриигровую валюту, улучшать свои характеристики, приобретать скины и менять внешний вид игрового интерфейса. В игре присутствует система прокачки, позволяющая увеличивать доход от кликов и получать бонусы. Дополнительным элементом является мини-игра "Орёл и Решка", в которой можно выиграть ценные бонусы или потерять часть прогресса.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Возможности
 
-## Expanding the ESLint configuration
+- **Заработок валюты**: нажимайте на кнопку и зарабатывайте игровую валюту.
+- **Система прокачки**: улучшайте уровень персонажа, увеличивайте доходность кликов.
+- **Магазин скинов**: покупайте новые скины для персонажей, а также изменяйте внешний вид кликабельных элементов.
+- **Кастомизация интерфейса**: возможность смены рамок и оформления игры.
+- **Мини-игра "Орёл и Решка"**: участвуйте в рисковой игре, чтобы получить дополнительные бонусы или потерять часть прогресса.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Технологии
 
-- Configure the top-level `parserOptions` property like this:
+- **TypeScript** — язык программирования с поддержкой статической типизации.
+- **React** — библиотека для создания пользовательских интерфейсов.
+- **SCSS** — препроцессор CSS для удобной стилизации.
+- **Electron** — платформа для создания кроссплатформенных настольных приложений.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+## Установка
+
+1. Склонируйте репозиторий:
+   ```sh
+   git clone <URL вашего репозитория>
+   ```
+2. Перейдите в папку проекта:
+   ```sh
+   cd APPLICATION-CLICKER
+   ```
+3. Установите зависимости с помощью npm:
+   ```sh
+   npm install
+   ```
+
+## Запуск проекта
+
+Для запуска локального сервера используйте команду:
+
+```sh
+npm run dev
 ```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
