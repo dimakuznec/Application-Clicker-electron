@@ -23,7 +23,7 @@ Clicker Game — это увлекательная игра-кликер, раз
 
 1. Склонируйте репозиторий:
    ```sh
-   git clone <URL вашего репозитория>
+   git clone https://github.com/dimakuznec/Application-Clicker-electron.git
    ```
 2. Перейдите в папку проекта:
    ```sh
